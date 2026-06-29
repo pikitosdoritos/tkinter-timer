@@ -3,14 +3,6 @@ from tkinter import messagebox
 
 seconds = 9
 
-window = tkinter.Tk()
-
-window.title("Timer")
-window.geometry("400x400+2800+300")
-
-label = tkinter.Label(window)
-label.pack(pady=10)
-
 def countdown():
     global seconds
     
@@ -22,6 +14,15 @@ def countdown():
 
     seconds -= 1
 
-countdown()
+window = tkinter.Tk()
+
+window.title("Timer")
+window.geometry("400x400+2800+300")
+
+label = tkinter.Label(window)
+label.pack(pady=10)
+
+button = tkinter.Button(window, text="Start", command=countdown)
+button.pack(pady=100)
 
 window.mainloop()
