@@ -14,6 +14,13 @@ def countdown():
 
     seconds -= 1
 
+def start():
+    global seconds
+    
+    seconds = int(input_field.get())
+
+    countdown()
+
 window = tkinter.Tk()
 
 window.title("Timer")
@@ -23,9 +30,9 @@ label = tkinter.Label(window)
 label.pack(pady=10)
 
 input_field = tkinter.Entry(window, width=50)
-input_field.pack(pady=30)
+input_field.pack(pady=10)
 
-button = tkinter.Button(window, text="Start", command=countdown)
-button.pack(pady=100)
+button = tkinter.Button(window, text="Start", command=start)
+button.pack(pady=10)
 
 window.mainloop()
