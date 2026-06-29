@@ -7,6 +7,8 @@ def countdown():
     global seconds
     
     if seconds < 0:
+        input_field.pack(pady=10)
+        button.pack(pady=10)
         return
     
     window.after(1000, countdown)
@@ -18,6 +20,9 @@ def start():
     global seconds
     
     seconds = int(input_field.get())
+
+    input_field.pack_forget()
+    button.pack_forget()
 
     countdown()
 
