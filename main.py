@@ -1,4 +1,5 @@
 import tkinter
+import winsound
 from tkinter import messagebox
 
 seconds = 9
@@ -9,6 +10,7 @@ def countdown():
     if seconds < 0:
         input_field.pack(pady=10)
         button.pack(pady=10)
+        winsound.Beep(1000, 500)
         return
     
     window.after(1000, countdown)
