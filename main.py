@@ -8,7 +8,7 @@ window = tkinter.Tk()
 window.title("Timer")
 window.geometry("400x400+2800+300")
 
-label = tkinter.Label(window, text=str(seconds))
+label = tkinter.Label(window)
 label.pack(pady=10)
 
 def countdown():
